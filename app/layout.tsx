@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { site, contact, social } from "@/lib/site-config";
+import { asset } from "@/lib/asset";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: asset("/favicon.ico") },
 };
 
 const jsonLd = {

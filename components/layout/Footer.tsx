@@ -6,7 +6,6 @@ import { Newsletter } from "./Newsletter";
 import { BackToTop } from "./BackToTop";
 import { contact, footerLinks, site, social } from "@/lib/site-config";
 import { getPrograms } from "@/lib/content";
-import { asset } from "@/lib/asset";
 
 const socialLinks: { href: string; name: IconName; label: string }[] = [
   { href: social.facebook, name: "facebook", label: "Facebook" },
