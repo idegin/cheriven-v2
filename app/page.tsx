@@ -7,6 +7,7 @@ import { Partners } from "@/components/home/Partners";
 import { Faq } from "@/components/home/Faq";
 import { Events } from "@/components/home/Events";
 import { Blog } from "@/components/home/Blog";
+import type { Metadata } from "next";
 import {
   getHome,
   getPrograms,
@@ -15,6 +16,10 @@ import {
   getEvents,
   getPosts,
 } from "@/lib/content";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   const home = getHome();
