@@ -5,6 +5,7 @@ import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { formatDate } from "@/lib/format";
+import { asset } from "@/lib/asset";
 import type { Post } from "@/lib/content";
 
 export function Blog({ posts }: { posts: Post[] }) {
@@ -46,7 +47,7 @@ export function Blog({ posts }: { posts: Post[] }) {
               >
                 <Link href={`/blog/${post.slug}`} className="relative block aspect-[16/10] overflow-hidden">
                   <Image
-                    src={post.image}
+                    src={asset(post.image)}
                     alt={post.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

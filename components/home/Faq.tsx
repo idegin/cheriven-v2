@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
+import { asset } from "@/lib/asset";
 import type { Faq as FaqItem } from "@/lib/content";
 
 export function Faq({ faqs }: { faqs: FaqItem[] }) {
@@ -33,7 +34,7 @@ export function Faq({ faqs }: { faqs: FaqItem[] }) {
             <Reveal delay={100}>
               <div className="relative mt-10 overflow-hidden rounded-3xl">
                 <Image
-                  src="/images/ngo/ngo-9.jpeg"
+                  src={asset("/images/ngo/ngo-9.jpeg")}
                   alt="A Cheriven Foundation empowerment session"
                   width={560}
                   height={360}
@@ -43,7 +44,7 @@ export function Faq({ faqs }: { faqs: FaqItem[] }) {
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 p-6">
                   <p className="font-display text-lg text-white">Still have questions?</p>
                   <a
-                    href="/contact"
+                    href={asset("/contact")}
                     className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-800 transition hover:bg-sand-100"
                   >
                     Ask us

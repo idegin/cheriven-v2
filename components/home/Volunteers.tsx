@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
+import { asset } from "@/lib/asset";
 
 const ways: { icon: IconName; title: string; text: string }[] = [
   { icon: "spark", title: "Share your skills", text: "Train, mentor and coach beneficiaries in the workshop or classroom." },
@@ -27,18 +28,18 @@ export function Volunteers() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="overflow-hidden rounded-3xl shadow-card">
-                  <Image src={photos[0]} alt="Volunteers serving the community" width={340} height={420} className="h-52 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-64" />
+                  <Image src={asset(photos[0])} alt="Volunteers serving the community" width={340} height={420} className="h-52 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-64" />
                 </div>
                 <div className="overflow-hidden rounded-3xl shadow-card">
-                  <Image src={photos[1]} alt="Team distributing support to families" width={340} height={300} className="h-40 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-48" />
+                  <Image src={asset(photos[1])} alt="Team distributing support to families" width={340} height={300} className="h-40 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-48" />
                 </div>
               </div>
               <div className="space-y-4 pt-10">
                 <div className="overflow-hidden rounded-3xl shadow-card">
-                  <Image src={photos[2]} alt="Volunteers at a skills workshop" width={340} height={300} className="h-40 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-48" />
+                  <Image src={asset(photos[2])} alt="Volunteers at a skills workshop" width={340} height={300} className="h-40 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-48" />
                 </div>
                 <div className="relative overflow-hidden rounded-3xl shadow-card">
-                  <Image src={photos[3]} alt="Community empowerment in action" width={340} height={420} className="h-52 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-64" />
+                  <Image src={asset(photos[3])} alt="Community empowerment in action" width={340} height={420} className="h-52 w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-64" />
                 </div>
               </div>
             </div>
@@ -90,7 +91,7 @@ export function Volunteers() {
 
             <Reveal delay={120}>
               <a
-                href="/volunteers"
+                href={asset("/volunteers")}
                 className="group mt-9 inline-flex items-center gap-2.5 rounded-full bg-accent-600 px-8 py-4 font-semibold text-white shadow-[0_16px_40px_-12px_rgba(215,23,32,0.5)] transition hover:-translate-y-0.5 hover:bg-accent-700"
               >
                 Become a volunteer

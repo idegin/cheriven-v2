@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
+import { asset } from "@/lib/asset";
 import type { HomeContent } from "@/lib/content";
 
 type Tab = { key: string; label: string; icon: IconName; text: string };
@@ -29,7 +30,7 @@ export function About({ about }: { about: HomeContent["about"] }) {
             <div className="relative">
               <div className="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(28,27,41,0.35)]">
                 <Image
-                  src={about.images[0]}
+                  src={asset(about.images[0])}
                   alt="Cheriven Foundation empowering a community member"
                   width={720}
                   height={820}
@@ -39,7 +40,7 @@ export function About({ about }: { about: HomeContent["about"] }) {
               {/* overlapping secondary image */}
               <div className="absolute -bottom-10 -right-4 w-44 overflow-hidden rounded-2xl border-4 border-canvas shadow-xl sm:-right-8 sm:w-56">
                 <Image
-                  src={about.images[1]}
+                  src={asset(about.images[1])}
                   alt="Beneficiaries of our empowerment programmes"
                   width={280}
                   height={220}
@@ -99,7 +100,7 @@ export function About({ about }: { about: HomeContent["about"] }) {
             <Reveal delay={140}>
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <a
-                  href="/about"
+                  href={asset("/about")}
                   className="group inline-flex items-center gap-2.5 rounded-full bg-brand-700 px-7 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800"
                 >
                   More about us

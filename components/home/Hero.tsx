@@ -111,7 +111,7 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
               Donate now
             </a>
             <a
-              href="/programs"
+              href={asset("/programs")}
               className="group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
             >
               Explore our programs

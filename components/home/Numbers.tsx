@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { asset } from "@/lib/asset";
 import type { Stat } from "@/lib/content";
 
 const icons: IconName[] = ["users", "handHeart", "check", "heart"];
@@ -71,7 +72,7 @@ export function Numbers({ stats }: { stats: Stat[] }) {
     <section className="relative overflow-hidden bg-brand-900 py-20 lg:py-24">
       {/* atmospheric image */}
       <Image
-        src="/images/ngo/ngo-10.jpeg"
+        src={asset("/images/ngo/ngo-10.jpeg")}
         alt=""
         fill
         sizes="100vw"

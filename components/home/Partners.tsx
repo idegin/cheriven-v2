@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { asset } from "@/lib/asset";
 import type { Partner } from "@/lib/content";
 
 export function Partners({ partners }: { partners: Partner[] }) {
@@ -21,7 +22,7 @@ export function Partners({ partners }: { partners: Partner[] }) {
             {partners.map((p) => (
               <li key={p.slug} className="flex items-center justify-center">
                 <Image
-                  src={p.logo}
+                  src={asset(p.logo)}
                   alt={p.name}
                   width={140}
                   height={72}

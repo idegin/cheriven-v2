@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { asset } from "@/lib/asset";
 import type { Program } from "@/lib/content";
 
 export function Programs({ programs }: { programs: Program[] }) {
@@ -42,7 +43,7 @@ export function Programs({ programs }: { programs: Program[] }) {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src={program.image}
+                  src={asset(program.image)}
                   alt={program.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

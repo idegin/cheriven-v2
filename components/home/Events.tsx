@@ -5,6 +5,7 @@ import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { formatDate } from "@/lib/format";
+import { asset } from "@/lib/asset";
 import type { EventItem } from "@/lib/content";
 
 export function Events({ events }: { events: EventItem[] }) {
@@ -43,7 +44,7 @@ export function Events({ events }: { events: EventItem[] }) {
           <Reveal as="article" className="group relative overflow-hidden rounded-[2rem] border border-white/10">
             <div className="relative aspect-[3/4] sm:aspect-[16/11]">
               <Image
-                src={featured.image}
+                src={asset(featured.image)}
                 alt={featured.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -95,7 +96,7 @@ export function Events({ events }: { events: EventItem[] }) {
                 >
                   <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl sm:h-32 sm:w-36">
                     <Image
-                      src={event.image}
+                      src={asset(event.image)}
                       alt={event.title}
                       fill
                       sizes="150px"
