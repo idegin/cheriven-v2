@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site-config";
+import { asset } from "@/lib/asset";
 
 type LogoProps = {
   tone?: "dark" | "light";
@@ -20,7 +21,7 @@ export function Logo({ tone = "dark", className = "", compact = false }: LogoPro
     >
       <span className="relative inline-flex shrink-0 items-center justify-center">
         <Image
-          src="/brand/logo.png"
+          src={asset("/brand/logo.png")}
           alt=""
           width={52}
           height={52}

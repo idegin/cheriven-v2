@@ -32,6 +32,10 @@ export function Header() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  // Transparent header sits over the dark hero -> use light text.
+  // Once scrolled (solid light bar) or the mobile menu is open -> dark text.
+  const light = !(scrolled || open);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Utility top bar */}
@@ -74,13 +78,13 @@ export function Header() {
       {/* Main navigation */}
       <div
         className={`transition-all duration-500 ${
-          scrolled
-            ? "bg-canvas/85 shadow-[0_10px_40px_-20px_rgba(28,27,41,0.4)] backdrop-blur-xl"
+          scrolled || open
+            ? "bg-canvas/90 shadow-[0_10px_40px_-20px_rgba(28,27,41,0.4)] backdrop-blur-xl"
             : "bg-transparent"
         }`}
       >
         <Container className="flex h-18 items-center justify-between gap-4 py-3.5 lg:h-20">
-          <Logo />
+          <Logo tone={light ? "light" : "dark"} />
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
             {primaryNav.map((item) => (
@@ -90,8 +94,12 @@ export function Header() {
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={`relative rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-brand-800"
-                    : "text-ink-700 hover:text-brand-800"
+                    ? light
+                      ? "text-white"
+                      : "text-brand-800"
+                    : light
+                      ? "text-white/85 hover:text-white"
+                      : "text-ink-700 hover:text-brand-800"
                 }`}
               >
                 {item.label}
@@ -111,7 +119,11 @@ export function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink-200 bg-surface text-brand-800 transition hover:border-brand-700 hover:text-brand-700 lg:hidden"
+              className={`inline-flex h-11 w-11 items-center justify-center rounded-full border transition lg:hidden ${
+                light
+                  ? "border-white/40 text-white hover:bg-white/10"
+                  : "border-ink-200 bg-surface text-brand-800 hover:border-brand-700 hover:text-brand-700"
+              }`}
             >
               <Icon name={open ? "close" : "menu"} size={22} />
             </button>

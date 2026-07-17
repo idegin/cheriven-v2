@@ -41,7 +41,7 @@ export function Events({ events }: { events: EventItem[] }) {
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Featured event */}
           <Reveal as="article" className="group relative overflow-hidden rounded-[2rem] border border-white/10">
-            <div className="relative aspect-[16/12] sm:aspect-[16/10]">
+            <div className="relative aspect-[3/4] sm:aspect-[16/11]">
               <Image
                 src={featured.image}
                 alt={featured.title}
@@ -49,7 +49,7 @@ export function Events({ events }: { events: EventItem[] }) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/70 to-brand-950/10 sm:via-brand-950/45" />
             </div>
             <div className="absolute left-6 top-6 flex flex-col items-center rounded-2xl bg-white px-4 py-3 text-center text-brand-900 shadow-lg">
               <span className="font-display text-3xl font-semibold leading-none">{f.day}</span>

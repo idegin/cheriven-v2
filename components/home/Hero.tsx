@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { social } from "@/lib/site-config";
+import { asset } from "@/lib/asset";
 import type { HeroSlide } from "@/lib/content";
 
 const ROTATE_MS = 6500;
@@ -38,7 +39,7 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
             aria-hidden={i !== active}
           >
             <Image
-              src={slide.image}
+              src={asset(slide.image)}
               alt=""
               fill
               priority={i === 0}
@@ -103,7 +104,7 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
           {/* CTAs (static across slides) */}
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="/donate"
+              href={asset("/donate")}
               className="group inline-flex items-center gap-2.5 rounded-full bg-accent-600 px-8 py-4 font-semibold text-white shadow-[0_16px_40px_-12px_rgba(215,23,32,0.6)] transition hover:-translate-y-0.5 hover:bg-accent-700"
             >
               <Icon name="handHeart" size={20} />
