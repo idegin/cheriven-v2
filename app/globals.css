@@ -1,26 +1,235 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================================
+   CHERIVEN EMPOWERMENT FOUNDATION — DESIGN SYSTEM
+   Tailwind v4 theme. Warm humanitarian editorial.
+   Brand indigo #3a3792 · Teal #79b5bd · Sand #e8d5b5 · Accent red #D71720
+   ========================================================================== */
+
+@theme {
+  /* ---- Brand: Indigo (primary) ---------------------------------------- */
+  --color-brand-50: #f2f2fc;
+  --color-brand-100: #e7e6f9;
+  --color-brand-200: #d1d0f2;
+  --color-brand-300: #b3b0e8;
+  --color-brand-400: #8f8ada;
+  --color-brand-500: #726bcb;
+  --color-brand-600: #5d54b8;
+  --color-brand-700: #3a3792; /* anchor */
+  --color-brand-800: #302e75;
+  --color-brand-900: #2a2860;
+  --color-brand-950: #1a193b;
+
+  /* ---- Teal (secondary) ----------------------------------------------- */
+  --color-teal-50: #f2f8f9;
+  --color-teal-100: #e0eef0;
+  --color-teal-200: #c4dfe3;
+  --color-teal-300: #9fcad0;
+  --color-teal-400: #79b5bd; /* anchor */
+  --color-teal-500: #579aa3;
+  --color-teal-600: #457e88;
+  --color-teal-700: #3a666f;
+  --color-teal-800: #33545b;
+  --color-teal-900: #2e474e;
+  --color-teal-950: #1a2c31;
+
+  /* ---- Sand (warm neutral accent) ------------------------------------- */
+  --color-sand-50: #fbf8f2;
+  --color-sand-100: #f5ecdd;
+  --color-sand-200: #e8d5b5; /* anchor */
+  --color-sand-300: #dcbf93;
+  --color-sand-400: #cda26a;
+  --color-sand-500: #c08b4c;
+  --color-sand-600: #b27540;
+  --color-sand-700: #945c37;
+  --color-sand-800: #794b32;
+  --color-sand-900: #633f2c;
+  --color-sand-950: #382115;
+
+  /* ---- Accent: Red (CTA / logo) --------------------------------------- */
+  --color-accent-50: #fef2f2;
+  --color-accent-100: #fde3e3;
+  --color-accent-200: #fbcccc;
+  --color-accent-300: #f7a8a8;
+  --color-accent-400: #f17575;
+  --color-accent-500: #e64545;
+  --color-accent-600: #d71720; /* anchor */
+  --color-accent-700: #b50f16;
+  --color-accent-800: #951116;
+  --color-accent-900: #7b1519;
+  --color-accent-950: #430709;
+
+  /* ---- Ink (warm-cool neutral for text & surfaces) -------------------- */
+  --color-ink-50: #f6f6f8;
+  --color-ink-100: #ececf1;
+  --color-ink-200: #d7d7e0;
+  --color-ink-300: #b4b4c4;
+  --color-ink-400: #8c8ca2;
+  --color-ink-500: #6b6b83;
+  --color-ink-600: #55556a;
+  --color-ink-700: #454556;
+  --color-ink-800: #2f2f3c;
+  --color-ink-900: #1c1b29;
+  --color-ink-950: #111019;
+
+  /* ---- Semantic surfaces ---------------------------------------------- */
+  --color-canvas: #fdfbf7;
+  --color-surface: #ffffff;
+
+  /* ---- Radii ----------------------------------------------------------- */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.75rem;
+
+  /* ---- Elevation (soft, warm-tinted shadows) -------------------------- */
+  --shadow-soft: 0 1px 2px rgba(28, 27, 41, 0.04), 0 8px 24px rgba(28, 27, 41, 0.06);
+  --shadow-card: 0 2px 4px rgba(28, 27, 41, 0.04), 0 18px 40px -12px rgba(28, 27, 41, 0.16);
+  --shadow-lift: 0 30px 60px -20px rgba(58, 55, 146, 0.28);
+  --shadow-glow: 0 20px 60px -12px rgba(121, 181, 189, 0.5);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-kenburns: kenburns 12s ease-out both;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
 }
 
+/* Fonts are injected by next/font in layout.tsx as CSS variables. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes kenburns {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to { transform: scale(1.14) translate3d(-1.5%, -1.5%, 0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
   }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background-color: var(--color-brand-700);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-700);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  img { -webkit-user-drag: none; }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================================
+   COMPONENT UTILITIES
+   ========================================================================== */
+@layer components {
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brand-700);
+  }
+
+  /* Reveal-on-scroll — element starts hidden, `.is-visible` reveals it. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.9s var(--ease-out-expo),
+      transform 0.9s var(--ease-out-expo);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Editorial link underline */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s var(--ease-out-expo);
+  }
+  .link-underline:hover { background-size: 100% 1.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* Utility: hide scrollbar for marquees */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Grain / texture overlay helper */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
 }
