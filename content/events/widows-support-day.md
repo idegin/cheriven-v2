@@ -3,7 +3,7 @@ title: "Widows Support & Grant Day"
 date: "2026-10-05"
 time: "11:00 AM"
 location: "Abuja, Nigeria"
-image: "/images/ngo/ngo-15.jpeg"
+image: "/images/site/ngo-15.jpeg"
 ctaText: "Get details"
 ctaLink: "/contact"
 ---

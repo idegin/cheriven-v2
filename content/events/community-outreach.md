@@ -3,7 +3,7 @@ title: "Community Empowerment Outreach"
 date: "2026-08-23"
 time: "10:00 AM"
 location: "New Garki International Market, Abuja"
-image: "/images/ngo/ngo-7.jpeg"
+image: "/images/site/ngo-7.jpeg"
 ctaText: "Join us"
 ctaLink: "/contact"
 ---

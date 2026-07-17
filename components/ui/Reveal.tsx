@@ -8,13 +8,22 @@ type RevealProps = {
   as?: ElementType;
   /** stagger delay in ms */
   delay?: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
 };
 
 /**
  * Scroll-triggered reveal using IntersectionObserver.
  * Respects prefers-reduced-motion via the CSS in globals.css.
+ * Extra props (e.g. `href` when `as={Link}`) are forwarded to the element.
  */
-export function Reveal({ children, className = "", as: Tag = "div", delay = 0 }: RevealProps) {
+export function Reveal({
+  children,
+  className = "",
+  as: Tag = "div",
+  delay = 0,
+  ...rest
+}: RevealProps) {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -39,6 +48,7 @@ export function Reveal({ children, className = "", as: Tag = "div", delay = 0 }:
       ref={ref}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      {...rest}
     >
       {children}
     </Tag>

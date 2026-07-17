@@ -72,7 +72,7 @@ export function Numbers({ stats }: { stats: Stat[] }) {
     <section className="relative overflow-hidden bg-brand-900 py-20 lg:py-24">
       {/* atmospheric image */}
       <Image
-        src={asset("/images/ngo/ngo-10.jpeg")}
+        src={asset("/images/site/ngo-10.jpeg")}
         alt=""
         fill
         sizes="100vw"

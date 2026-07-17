@@ -1,7 +1,7 @@
 ---
 title: "Social Support & Relief"
 excerpt: "Food drives, healthcare outreach and emergency relief that meet urgent needs with compassion and dignity."
-image: "/images/ngo/ngo-14.jpeg"
+image: "/images/site/ngo-14.jpeg"
 icon: "hands"
 order: 5
 ---

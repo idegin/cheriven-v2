@@ -56,13 +56,14 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
 
       <Container className="relative">
         <div className="max-w-2xl">
+          {/* All slides share one grid cell so the stage height stays constant
+              (sized to the tallest slide) — the CTAs below never jump. */}
+          <div className="grid">
           {slides.map((slide, i) => (
             <div
               key={slide.title}
-              className={`transition-all duration-700 ${
-                i === active
-                  ? "block opacity-100"
-                  : "pointer-events-none absolute -z-10 opacity-0"
+              className={`col-start-1 row-start-1 transition-opacity duration-700 ${
+                i === active ? "opacity-100" : "pointer-events-none opacity-0"
               }`}
               aria-hidden={i !== active}
             >
@@ -100,6 +101,7 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
               </p>
             </div>
           ))}
+          </div>
 
           {/* CTAs (static across slides) */}
           <div className="mt-9 flex flex-wrap items-center gap-4">

@@ -30,7 +30,7 @@ export function Events({ events }: { events: EventItem[] }) {
           />
           <Reveal>
             <Link
-              href="/#events"
+              href="/events"
               className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-teal-300 hover:bg-white/10"
             >
               All events
@@ -71,15 +71,13 @@ export function Events({ events }: { events: EventItem[] }) {
                   </span>
                 )}
               </div>
-              {featured.ctaText && (
-                <Link
-                  href={featured.ctaLink ?? "/contact"}
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-800 transition hover:bg-sand-100"
-                >
-                  {featured.ctaText}
-                  <Icon name="arrowRight" size={16} />
-                </Link>
-              )}
+              <Link
+                href={`/events/${featured.slug}`}
+                className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-800 transition hover:bg-sand-100"
+              >
+                View details
+                <Icon name="arrowRight" size={16} />
+              </Link>
             </div>
           </Reveal>
 
@@ -116,10 +114,10 @@ export function Events({ events }: { events: EventItem[] }) {
                       <span className="truncate">{event.location}</span>
                     </p>
                     <Link
-                      href={event.ctaLink ?? "/contact"}
+                      href={`/events/${event.slug}`}
                       className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-300"
                     >
-                      {event.ctaText ?? "Learn more"}
+                      View details
                       <Icon name="arrowUpRight" size={15} />
                     </Link>
                   </div>

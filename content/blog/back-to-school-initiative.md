@@ -3,7 +3,7 @@ title: "Back to School: keeping vulnerable children in the classroom"
 date: "2026-02-20"
 category: "Education"
 excerpt: "How our back-to-school drive delivered supplies, uniforms and hope to children at risk of dropping out."
-image: "/images/ngo/ngo-2.jpeg"
+image: "/images/site/ngo-2.jpeg"
 author: "Cheriven Team"
 ---
 

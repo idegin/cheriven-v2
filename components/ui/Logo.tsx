@@ -19,14 +19,14 @@ export function Logo({ tone = "dark", className = "", compact = false }: LogoPro
       aria-label={`${site.name} — home`}
       className={`group inline-flex items-center gap-3 ${className}`}
     >
-      <span className="relative inline-flex shrink-0 items-center justify-center">
+      <span className="relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-[0_4px_14px_-4px_rgba(28,27,41,0.25)] ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12">
         <Image
-          src={asset("/brand/logo.png")}
+          src={asset("/brand/logo-mark.jpeg")}
           alt=""
           width={52}
           height={52}
           priority
-          className="h-11 w-11 rounded-full object-cover ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
+          className="h-full w-full rounded-full object-cover"
         />
       </span>
       {!compact && (

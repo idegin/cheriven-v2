@@ -1,7 +1,7 @@
 ---
 title: "Disability Inclusion"
 excerpt: "A cross-cutting commitment to make every programme accessible and responsive to persons with disabilities."
-image: "/images/ngo/ngo-16.jpeg"
+image: "/images/site/ngo-16.jpeg"
 icon: "inclusion"
 order: 6
 ---

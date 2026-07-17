@@ -64,3 +64,13 @@ export const footerLinks = {
 
 /** Primary call-to-action used across the site */
 export const donateHref = "/donate";
+
+/**
+ * Bank / donation details. Replace the placeholders with the foundation's
+ * real account information before going live.
+ */
+export const donation = {
+  bankName: "Bank name — update in lib/site-config.ts",
+  accountName: "Cheriven Empowerment Foundation",
+  accountNumber: "0000000000",
+} as const;

@@ -1,7 +1,7 @@
 ---
 title: "Vocational Training & Livelihoods"
 excerpt: "Hands-on skills acquisition and graduate support that build lasting, self-sufficient sources of income."
-image: "/images/ngo/ngo-12.jpeg"
+image: "/images/site/ngo-12.jpeg"
 icon: "tools"
 order: 4
 ---

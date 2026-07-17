@@ -1,7 +1,7 @@
 ---
 title: "Women & Widow Empowerment"
 excerpt: "Grants, business training and support networks that help widows and women rebuild independent, dignified livelihoods."
-image: "/images/ngo/ngo-5.jpeg"
+image: "/images/site/ngo-5.jpeg"
 icon: "heart"
 order: 2
 ---

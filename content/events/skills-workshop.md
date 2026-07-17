@@ -3,7 +3,7 @@ title: "Free Vocational Skills Workshop"
 date: "2026-09-14"
 time: "9:00 AM"
 location: "Cheriven Training Hub, Abuja"
-image: "/images/ngo/ngo-13.jpeg"
+image: "/images/site/ngo-13.jpeg"
 ctaText: "Register interest"
 ctaLink: "/contact"
 ---

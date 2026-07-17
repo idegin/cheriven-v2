@@ -34,7 +34,7 @@ export function Faq({ faqs }: { faqs: FaqItem[] }) {
             <Reveal delay={100}>
               <div className="relative mt-10 overflow-hidden rounded-3xl">
                 <Image
-                  src={asset("/images/ngo/ngo-9.jpeg")}
+                  src={asset("/images/site/ngo-9.jpeg")}
                   alt="A Cheriven Foundation empowerment session"
                   width={560}
                   height={360}
