@@ -111,6 +111,7 @@ export type EventItem = {
   location: string;
   image: string;
   excerpt?: string;
+  featured?: boolean;
   ctaText?: string;
   ctaLink?: string;
   body: string;
@@ -144,9 +145,11 @@ export function getPost(slug: string): Post | undefined {
 }
 
 export function getEvents(): EventItem[] {
-  return readCollection<EventItem>("events").sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-  );
+  // Featured events lead; the rest follow by date (soonest first).
+  return readCollection<EventItem>("events").sort((a, b) => {
+    if (!!a.featured !== !!b.featured) return a.featured ? -1 : 1;
+    return new Date(a.date).getTime() - new Date(b.date).getTime();
+  });
 }
 
 export function getEvent(slug: string): EventItem | undefined {

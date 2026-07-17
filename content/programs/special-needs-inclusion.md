@@ -1,7 +1,7 @@
 ---
 title: "Special Needs Inclusion"
 excerpt: "A cross-cutting commitment to make every programme accessible and responsive to persons with special needs."
-image: "/images/site/ngo-16.jpeg"
+image: "/images/programs/special-needs-inclusion.jpeg"
 icon: "inclusion"
 order: 6
 ---

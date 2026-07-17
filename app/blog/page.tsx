@@ -86,10 +86,10 @@ export default function BlogPage() {
                       <time dateTime={d.iso} className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-ink-400">
                         <Icon name="calendar" size={15} className="text-teal-500" /> {d.full}
                       </time>
-                      <h3 className="mt-3 text-xl leading-snug text-ink-900 group-hover:text-brand-700">
+                      <h3 className="mt-3 line-clamp-2 text-xl leading-snug text-ink-900 group-hover:text-brand-700">
                         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                       </h3>
-                      <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-ink-500">{post.excerpt}</p>
+                      <p className="mt-3 line-clamp-3 flex-1 text-[0.95rem] leading-relaxed text-ink-500">{post.excerpt}</p>
                       <Link href={`/blog/${post.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700">
                         Read more
                         <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-50 transition group-hover:bg-accent-600 group-hover:text-white">

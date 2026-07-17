@@ -60,7 +60,7 @@ export function Events({ events }: { events: EventItem[] }) {
               <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-600 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                 Featured
               </span>
-              <h3 className="mt-3 text-2xl text-white sm:text-3xl">{featured.title}</h3>
+              <h3 className="mt-3 line-clamp-2 text-2xl text-white sm:text-3xl">{featured.title}</h3>
               <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-white/70">
                 <span className="inline-flex items-center gap-2">
                   <Icon name="mapPin" size={16} className="text-teal-300" /> {featured.location}
@@ -106,7 +106,7 @@ export function Events({ events }: { events: EventItem[] }) {
                     </div>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-lg text-white transition-colors group-hover:text-teal-200">
+                    <h3 className="line-clamp-2 text-lg text-white transition-colors group-hover:text-teal-200">
                       {event.title}
                     </h3>
                     <p className="mt-1.5 inline-flex items-center gap-2 text-sm text-white/60">

@@ -3,7 +3,7 @@ title: "From dependency to dignity: empowering widows with skills and grants"
 date: "2026-03-15"
 category: "Empowerment"
 excerpt: "Seed grants, business training and cooperative support are helping widows rebuild independent livelihoods."
-image: "/images/site/ngo-5.jpeg"
+image: "/images/blog/widow-empowerment-grants.jpeg"
 author: "Cheriven Team"
 ---
 

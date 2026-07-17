@@ -1,7 +1,7 @@
 ---
 title: "Youth Skills & Employability"
 excerpt: "Certified vocational training, entrepreneurship support and mentorship that turn young talent into self-reliance."
-image: "/images/site/ngo-8.jpeg"
+image: "/images/programs/youth-skills-employability.jpeg"
 icon: "spark"
 order: 3
 ---

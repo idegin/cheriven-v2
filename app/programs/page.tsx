@@ -69,7 +69,6 @@ export default function ProgramsPage() {
                       {program.title}
                     </h2>
                     <p className="mt-4 text-lg leading-relaxed text-ink-600">{program.excerpt}</p>
-                    <p className="mt-4 leading-relaxed text-ink-500">{program.body}</p>
                     <Link
                       href={`/programs/${program.slug}`}
                       className="group mt-7 inline-flex items-center gap-2.5 rounded-full border border-brand-700/20 px-6 py-3 text-sm font-semibold text-brand-800 transition hover:border-brand-700 hover:bg-brand-700 hover:text-white"

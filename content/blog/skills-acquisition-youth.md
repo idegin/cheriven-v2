@@ -3,7 +3,7 @@ title: "Skills to self-reliance: our youth vocational training in action"
 date: "2026-04-10"
 category: "Youth"
 excerpt: "Certified vocational training and startup support are turning young talent into sustainable livelihoods."
-image: "/images/site/ngo-8.jpeg"
+image: "/images/blog/skills-acquisition-youth.jpeg"
 author: "Cheriven Team"
 ---
 

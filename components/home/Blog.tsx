@@ -66,10 +66,10 @@ export function Blog({ posts }: { posts: Post[] }) {
                     <Icon name="calendar" size={15} className="text-teal-500" />
                     {d.full}
                   </time>
-                  <h3 className="mt-3 text-xl leading-snug text-ink-900 transition-colors group-hover:text-brand-700">
+                  <h3 className="mt-3 line-clamp-2 text-xl leading-snug text-ink-900 transition-colors group-hover:text-brand-700">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
-                  <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-ink-500">
+                  <p className="mt-3 line-clamp-3 flex-1 text-[0.95rem] leading-relaxed text-ink-500">
                     {post.excerpt}
                   </p>
                   <Link

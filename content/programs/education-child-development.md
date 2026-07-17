@@ -1,7 +1,7 @@
 ---
 title: "Education & Child Development"
 excerpt: "Scholarships, school supplies and back-to-school support that keep vulnerable children learning and thriving."
-image: "/images/site/ngo-2.jpeg"
+image: "/images/programs/education-child-development.jpeg"
 icon: "book"
 order: 1
 ---

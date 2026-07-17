@@ -59,10 +59,10 @@ export function Programs({ programs }: { programs: Program[] }) {
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-xl text-ink-900 transition-colors group-hover:text-brand-700">
+                <h3 className="line-clamp-2 text-xl text-ink-900 transition-colors group-hover:text-brand-700">
                   {program.title}
                 </h3>
-                <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-ink-500">
+                <p className="mt-3 line-clamp-3 flex-1 text-[0.95rem] leading-relaxed text-ink-500">
                   {program.excerpt}
                 </p>
                 <Link

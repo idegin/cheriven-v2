@@ -53,14 +53,14 @@ export default function EventsPage() {
                     </span>
                   </Link>
                   <div className="flex flex-col justify-center gap-3 p-7 lg:p-9">
-                    <h2 className="text-2xl text-ink-900 transition-colors group-hover:text-brand-700">
+                    <h2 className="line-clamp-2 text-2xl text-ink-900 transition-colors group-hover:text-brand-700">
                       <Link href={`/events/${event.slug}`}>{event.title}</Link>
                     </h2>
                     <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-500">
                       <span className="inline-flex items-center gap-2"><Icon name="mapPin" size={16} className="text-teal-500" /> {event.location}</span>
                       {event.time && <span className="inline-flex items-center gap-2"><Icon name="clock" size={16} className="text-teal-500" /> {event.time}</span>}
                     </div>
-                    <p className="text-ink-500">{event.excerpt ?? ""}</p>
+                    <p className="line-clamp-2 text-ink-500">{event.excerpt ?? ""}</p>
                     <Link href={`/events/${event.slug}`} className="mt-1 inline-flex w-fit items-center gap-2 text-sm font-semibold text-brand-700">
                       View details <Icon name="arrowRight" size={16} />
                     </Link>
