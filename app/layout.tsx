@@ -95,6 +95,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-canvas">
+        {/* Enable scroll-reveal only when JS is available (prevents blank
+            content if hydration is slow or fails). Runs before paint. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

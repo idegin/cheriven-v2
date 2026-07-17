@@ -11,7 +11,8 @@ export const site = {
   tagline: "Igniting hope, one life at a time.",
   description:
     "Cheriven Empowerment Foundation (CEF) is a CAC-registered Nigerian non-profit empowering widows, women, youth and children through education, vocational skills, sustainable livelihoods and social support.",
-  url: "https://www.cherivenfoundation.org",
+  // Canonical site origin. Override with NEXT_PUBLIC_SITE_URL for staging.
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.cherivenfoundation.org").replace(/\/+$/, ""),
   ogImage: "/brand/og-image.jpeg",
   locale: "en_NG",
 } as const;

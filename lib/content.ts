@@ -14,6 +14,16 @@ const CONTENT_DIR = path.join(process.cwd(), "content");
 
 marked.setOptions({ gfm: true, breaks: false });
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+/** Render markdown to HTML and prefix internal links with the deployment base path. */
+function renderMarkdown(md: string): string {
+  const html = marked.parse(md) as string;
+  if (!BASE_PATH) return html;
+  // href="/x" -> href="/base/x"  (skip protocol-relative "//" and anchors)
+  return html.replace(/href="\/(?!\/)/g, `href="${BASE_PATH}/`);
+}
+
 function readCollection<T>(dir: string): (T & { slug: string; body: string; html: string })[] {
   const full = path.join(CONTENT_DIR, dir);
   if (!fs.existsSync(full)) return [];
@@ -27,7 +37,7 @@ function readCollection<T>(dir: string): (T & { slug: string; body: string; html
         ...(data as T),
         slug: file.replace(/\.md$/, ""),
         body: content.trim(),
-        html: marked.parse(content.trim()) as string,
+        html: renderMarkdown(content.trim()),
       };
     });
 }
@@ -35,7 +45,7 @@ function readCollection<T>(dir: string): (T & { slug: string; body: string; html
 function readSingle<T>(file: string): T & { html: string } {
   const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf8");
   const { data, content } = matter(raw);
-  return { ...(data as T), html: marked.parse(content.trim()) as string };
+  return { ...(data as T), html: renderMarkdown(content.trim()) };
 }
 
 const byOrder = (a: { order?: number }, b: { order?: number }) =>
@@ -100,6 +110,7 @@ export type EventItem = {
   time?: string;
   location: string;
   image: string;
+  excerpt?: string;
   ctaText?: string;
   ctaLink?: string;
   body: string;

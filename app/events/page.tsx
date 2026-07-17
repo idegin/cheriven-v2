@@ -60,7 +60,7 @@ export default function EventsPage() {
                       <span className="inline-flex items-center gap-2"><Icon name="mapPin" size={16} className="text-teal-500" /> {event.location}</span>
                       {event.time && <span className="inline-flex items-center gap-2"><Icon name="clock" size={16} className="text-teal-500" /> {event.time}</span>}
                     </div>
-                    <p className="text-ink-500">{event.body}</p>
+                    <p className="text-ink-500">{event.excerpt ?? ""}</p>
                     <Link href={`/events/${event.slug}`} className="mt-1 inline-flex w-fit items-center gap-2 text-sm font-semibold text-brand-700">
                       View details <Icon name="arrowRight" size={16} />
                     </Link>

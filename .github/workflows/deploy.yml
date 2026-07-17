@@ -40,6 +40,10 @@ jobs:
         env:
           # Serve from the project sub-path on github.io (idegin.github.io/cheriven-v2)
           PAGES_BASE_PATH: /cheriven-v2
+          # Canonical origin for metadata, sitemap, robots (matches the live URL).
+          # When moving to the custom root domain, set this to the domain and
+          # remove PAGES_BASE_PATH.
+          NEXT_PUBLIC_SITE_URL: https://idegin.github.io/cheriven-v2
 
       - name: Disable Jekyll processing
         run: touch out/.nojekyll

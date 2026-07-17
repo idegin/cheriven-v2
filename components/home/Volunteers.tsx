@@ -44,7 +44,7 @@ export function Volunteers() {
               </div>
             </div>
             {/* floating volunteers badge */}
-            <div className="mx-auto -mt-20 flex w-fit items-center gap-3 rounded-full bg-white px-5 py-3 shadow-lift">
+            <div className="mx-auto -mt-8 flex w-fit items-center gap-3 rounded-full bg-white px-5 py-3 shadow-lift">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-700 text-white">
                 <Icon name="users" size={20} />
               </span>

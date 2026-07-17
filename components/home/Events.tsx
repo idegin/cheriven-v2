@@ -23,10 +23,10 @@ export function Events({ events }: { events: EventItem[] }) {
             eyebrow="What's coming up"
             title={
               <>
-                Upcoming events &amp; <span className="text-teal-300">outreaches</span>
+                Upcoming events &amp; <span className="text-teal-300">programs</span>
               </>
             }
-            description="Join us on the ground. Every event is a chance to serve, connect and make a tangible difference."
+            description="Join us on the ground. Every event and programme is a chance to serve, connect and make a tangible difference."
           />
           <Reveal>
             <Link

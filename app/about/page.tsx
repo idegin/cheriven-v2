@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const values: { icon: IconName; title: string; text: string }[] = [
   { icon: "heart", title: "Compassion", text: "We meet people in their vulnerability with dignity, never judgement." },
   { icon: "target", title: "Sustainability", text: "We build lasting change, not temporary relief — self-reliance over dependency." },
-  { icon: "inclusion", title: "Inclusion", text: "Everyone belongs, including persons with disabilities, across all our work." },
+  { icon: "inclusion", title: "Inclusion", text: "Everyone belongs, including persons with special needs, across all our work." },
   { icon: "check", title: "Integrity", text: "As registered trustees, we are accountable and transparent in all we do." },
 ];
 

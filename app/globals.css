@@ -188,8 +188,10 @@
     color: var(--color-brand-700);
   }
 
-  /* Reveal-on-scroll — element starts hidden, `.is-visible` reveals it. */
-  .reveal {
+  /* Reveal-on-scroll — element starts hidden ONLY when JS is available
+     (progressive enhancement). Without JS / before hydration the content is
+     fully visible, so a page can never render blank. */
+  .js .reveal {
     opacity: 0;
     transform: translateY(28px);
     transition:
@@ -197,7 +199,7 @@
       transform 0.9s var(--ease-out-expo);
     will-change: opacity, transform;
   }
-  .reveal.is-visible {
+  .js .reveal.is-visible {
     opacity: 1;
     transform: none;
   }

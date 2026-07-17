@@ -11,7 +11,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "Our Programs",
   description:
-    "Explore Cheriven Empowerment Foundation's programmes across education, women & widow empowerment, youth skills, livelihoods, social support and disability inclusion.",
+    "Explore Cheriven Empowerment Foundation's programmes across education, women & widow empowerment, youth skills, livelihoods, social support and special needs inclusion.",
 };
 
 export default function ProgramsPage() {
